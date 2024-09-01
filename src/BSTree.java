@@ -404,7 +404,8 @@ public class BSTree<T extends Comparable<? super T>> implements Iterable {
         return max;
     }
 
-    private void traverseLevel(BSTNode node, int targetLevel, int currentLevel, ArrayList<T> nodesAtLevel) {
+    private void traverseLevel\
+    (BSTNode node, int targetLevel, int currentLevel, ArrayList<T> nodesAtLevel) {
         if (node == null) {
             return;
         }
