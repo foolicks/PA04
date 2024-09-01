@@ -175,6 +175,7 @@ public class BSTree<T extends Comparable<? super T>> implements Iterable {
      *
      * @param key
      * @return true if insertion is successful and false otherwise
+     * @throws NullPointerException ensures the key is actually present
      */
     public boolean insert(T key) {
         // insertHelper?
@@ -184,6 +185,14 @@ public class BSTree<T extends Comparable<? super T>> implements Iterable {
         root = insertHelper(root, key);
         return true;
     }
+
+    /*
+    * Helper function for making the tree actually look like a tree
+    *
+    * @param node the proceding node and it's leaves
+    * @param key the actual data of the node
+    * @return another node instantiation for placing for left or right  
+    */
     private BSTNode insertHelper(BSTNode node, T key) {
         if (node == null) {
             nelems++;
